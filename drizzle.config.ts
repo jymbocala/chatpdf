@@ -13,5 +13,11 @@ export default {
   },
 } satisfies Config;
 
-// Terminal command: npx drizzle-kit push:pg
-// This command will look at our schema and make sure that our database in Neon is synced.
+// Terminal commands: 
+// 1. npx drizzle-kit push:pg
+  // Ensure that CompilerOptions taget in the tsconfig.json file is set to "es6"
+  // This command will look at our schema and make sure that our database in Neon is synced.
+  
+// 2. npx drizzle-kit studio
+  // Ensure you have pg package installed: npm install pg
+  // This command will open a browser database client. "Drizzle studio grabs your drizzle config file, connects to your database and lets you browse, add, delete and update everything based on your existing drizzle sql schema."
