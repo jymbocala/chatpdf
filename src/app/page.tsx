@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { UserButton, auth } from "@clerk/nextjs";
 import Link from "next/link";
+import { LogIn } from 'lucide-react';
 
 export default async function Home() {
   const { userId } = await auth(); // Returns string if authenticated otherwise null
@@ -29,9 +30,12 @@ export default async function Home() {
             ) : (
               <Link href="/sign-in">
                 <Button>Login to get Started!
+                  <LogIn className="w-4 h-4 ml-2"/>
                 </Button>
               </Link>
             )}
+
+            
           </div>
         </div>
       </div>
