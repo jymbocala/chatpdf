@@ -22,3 +22,8 @@ export const messages = pgTable('messages', {
   createdAt: timestamp('created_at').notNull().defaultNow(),
   role: userSystemEnum('role').notNull(),
 });
+
+
+// Notes: There is two parts to Drizzle:
+// 1. drizzle-orm - interacts with our database
+// 2. dizzle-kit - npm package that provide utility functions to create migrations and make sure that all our database are synced with the schema created. "a CLI companion for DrizzleORM, it lets generate SQL statements for schema creation and alternations or apply changes directly to the database." Docs: https://orm.drizzle.team/docs/migrations
